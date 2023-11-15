@@ -1,0 +1,41 @@
+{
+    "header": {
+        "main": {
+            "home": "Home",
+            "price": "Prices",
+            "custmer": "Custmer Services"
+        },
+        "additional": {
+            "tracking": "Track Your Shipment",
+            "sign": "Sign In"
+        }
+    },
+    "search": {
+        "main": "Track your shipment",
+        "placeholder": "Tracking No."
+    },
+    "progress": {
+        "number": "Shipment Number",
+        "update": "Last update",
+        "merchent": "Merchent Name",
+        "time": "Delivery Time",
+        "created": "Shipment Created",
+        "recieved": "Shipment Recieved",
+        "delivery": "Out For Delivery",
+        "delivered": "Shipment Delivered"
+    },
+    "table": {
+        "title": "Details Of Shipment",
+        "branch": "Branch",
+        "date": "Date",
+        "time": "Time",
+        "details": "Details"
+    },
+    "address": {
+        "title": "Delivery Address",
+        "address": "Dokki,Cairo , Egypt , Gohar square bulding number 4 ,first floor",
+        "problem": "Is There Any Problem !?",
+        "report": "Report a problem"
+    },
+    "error": "No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service."
+}

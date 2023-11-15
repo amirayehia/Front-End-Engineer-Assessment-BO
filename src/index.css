@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900;1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +17,222 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+body {
+  @apply font-Poppins box-border
+}
+
+
+/****************************************************/
+.navbar {
+  @apply border
+}
+
+nav {
+  @apply flex justify-between items-center m-auto p-3 font-bold md:w-3/4 text-sm lg:text-base
+}
+
+nav .logo {
+  @apply w-3/12 md:w-1/12
+}
+
+nav .basics {
+  @apply w-4/12 justify-around hidden lg:flex
+}
+
+nav .side {
+  @apply w-4/12 justify-around hidden lg:flex
+}
+
+
+/*STYLING PROGRESS BAR */
+.progress__bar {
+  @apply md:w-3/4 w-full  border-2 border-gray-100 rounded m-auto mt-16
+}
+
+.progress__bar .shipment__data {
+  @apply flex flex-wrap text-left border-b-2 border-gray-100 p-6
+}
+
+.progress__bar .shipment__data .special {
+  @apply w-1/4 font-medium md:text-sm text-[8px] 
+}
+
+.normal {
+  @apply bg-gray-600 text-gray-600
+}
+
+.error {
+  @apply bg-red-600
+}
+
+.pending {
+  @apply bg-yellow-300
+}
+
+.success {
+  @apply bg-lime-500
+}
+
+.shipment__data .header {
+  @apply w-1/4 md:text-xs pb-1 text-[8px]
+}
+
+.shipment__data .data {
+  @apply w-1/4 font-medium text-[8px]  md:text-sm  text-gray-800
+}
+
+
+.progress__bar .bottom_data div {
+  @apply w-fit font-medium md:text-sm text-[8px]  text-gray-600
+}
+
+.shipment__data .data.status {
+  @apply text-red-500
+}
+
+.normal-text {
+  @apply text-gray-600
+}
+
+.error-text {
+  @apply text-red-600
+}
+
+.pending-text {
+  @apply text-yellow-300
+}
+
+.success-text {
+  @apply text-lime-500
+}
+
+.progress__container {
+  @apply p-6
+}
+
+.progress__container .progress {
+  @apply bg-gray-200 rounded-full h-2 relative flex items-center
+}
+
+.progress__container .progress .progress__ {
+  @apply h-2 rounded-full
+}
+
+
+
+/*TABLE STYLING *************************************************/
+.table {
+  @apply table-auto text-start border border-gray-100 w-full
+}
+
+.table thead {
+  @apply border-b border-gray-100 bg-slate-50 text-gray-300
+}
+
+.table thead th {
+  @apply text-start py-3 px-3
+}
+
+.table tbody {
+  @apply text-gray-500
+}
+
+.table tbody tr {
+  @apply border border-gray-100
+}
+
+.table tbody tr td {
+  @apply py-3 px-3
+}
+
+/**Address STYLING */
+.address {
+  @apply text-gray-500
+}
+
+.address__container {
+  @apply lg:w-4/12 w-full
+}
+
+.address__container .title {
+  @apply text-start text-gray-700 md:text-xl text-sm my-4
+}
+
+.address__container .address {
+  @apply border rounded-lg p-7 mb-5 text-start
+}
+
+.address__container .problem {
+  @apply flex border rounded-lg py-2 px-7 justify-center items-center
+}
+
+.address__container .problem .problem_content {
+  @apply w-2/3
+}
+
+.address__container .problem .problem_content p {
+  @apply font-bold mb-4
+}
+
+.address__container .problem .problem_content a {
+  @apply text-white bg-red-600 py-2 px-4 rounded-xl
+}
+
+.address__container .discuss_content {
+  @apply w-1/3
+}
+
+
+
+/*********DETAILS *********************************************************/
+.datails {
+  @apply lg:flex justify-between md:w-3/4 m-auto mt-7 text-[8px] md:text-base 
+}
+
+.table_details {
+  @apply w-full lg:w-7/12
+}
+
+.table_details .title {
+  @apply text-start text-gray-700 md:text-xl text-sm my-4
+}
+
+/*SEARCH*********************************************/
+.search p {
+  @apply md:text-[40px] md:font-[600] text-gray-800 mb-5 text-center bg-slate-50 p-16 font-bold
+}
+
+.search form {
+  @apply -mt-14 search__container flex w-3/4 md:w-1/3 m-auto justify-center items-center bg-white rounded-xl overflow-hidden shadow-lg border focus-within:outline outline-blue-200
+}
+
+.search form input {
+  @apply p-1 md:py-3 w-5/6 border-none focus:border-none focus:ring-0
+}
+
+.search form button {
+  @apply text-3xl bg-red-500 text-white py-1 md:py-3 px-4 w-1/6
+}
+
+
+/**********************Arabic ***********************************/
+body:lang(ar){
+  @apply font-Cairo
+}
+nav:lang(ar), form:lang(ar), .datails:lang(ar), nav .basics:lang(ar), nav .side:lang(ar) {
+  @apply flex-row-reverse
+}
+
+.shipment__data:lang(ar), .progress:lang(ar), .bottom_data:lang(ar), .problem:lang(ar) {
+  @apply flex-row-reverse text-right
+}
+
+.datails .title:lang(ar), .problem_content:lang(ar) {
+  @apply text-end
+}
+
+.address:lang(ar), .search__container input:lang(ar) {
+  @apply text-end
 }
